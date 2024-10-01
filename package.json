@@ -1,5 +1,5 @@
 {
-  "name": "ngx-lightbox",
+  "name": "ngx-lightbox-base64",
   "version": "3.0.1",
   "description": "A port >= angular5 for lightbox2",
   "main": "index.js",
