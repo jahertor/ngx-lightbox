@@ -361,7 +361,11 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
     }
 
     const src: any = this.album[this.currentImageIndex].src;
-    preloader.src = src; //this._sanitizer.sanitize(SecurityContext.URL, src);
+    if (src.lastIndexOf('data:image/', 0) === 0) {
+      preloader.src = src;
+    } else {
+      this._sanitizer.sanitize(SecurityContext.URL, src);
+    }
   }
 
   /**
